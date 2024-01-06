@@ -4,4 +4,5 @@ export enum AppointmentStatus {
   CALLED,
   IN_CARE,
   COMPLITED,
+  UNDEFINED,
 }

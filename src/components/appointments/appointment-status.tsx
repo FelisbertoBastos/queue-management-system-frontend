@@ -6,30 +6,34 @@ interface AppointmentStatusProps {
 
 export const AppointmentStatus = ({ status }: AppointmentStatusProps) => {
   let tagClass = "tag ";
-  let tegText = "";
+  let tagText = "";
 
   switch (status) {
     case AppointmentStatusEnum.WAITING:
       tagClass += "is-primary";
-      tegText = "Aguardando";
+      tagText = "Aguardando";
       break;
     case AppointmentStatusEnum.CANCELED:
       tagClass += "is-danger";
-      tegText = "Cancelado";
+      tagText = "Cancelado";
       break;
     case AppointmentStatusEnum.CALLED:
       tagClass += "is-warning";
-      tegText = "Chamado";
+      tagText = "Chamado";
       break;
     case AppointmentStatusEnum.IN_CARE:
       tagClass += "is-link";
-      tegText = "Em atendimento";
+      tagText = "Em atendimento";
       break;
     case AppointmentStatusEnum.COMPLITED:
       tagClass += "is-success";
-      tegText = "Concluído";
+      tagText = "Concluído";
+      break;
+    case AppointmentStatusEnum.UNDEFINED:
+      tagClass += "is-light";
+      tagText = "Indefinido";
       break;
   }
 
-  return <span className={tagClass}>{tegText}</span>;
+  return <span className={tagClass}>{tagText}</span>;
 };

@@ -10,7 +10,7 @@ const appointments = [
   {
     id: 2,
     patient: { name: "Maria do Rośario Pereira", age: 38, gender: "F" },
-    status: AppointmentStatus.WAITING,
+    status: AppointmentStatus.UNDEFINED,
   },
 ];
 
