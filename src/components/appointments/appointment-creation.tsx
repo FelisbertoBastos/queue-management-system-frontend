@@ -10,6 +10,10 @@ export const AppointmentCreation = () => {
     setShowAppointmentForm(true);
   };
 
+  const closeAppointmentForm = () => {
+    setShowAppointmentForm(false);
+  };
+
   return (
     <>
       <Button
@@ -20,7 +24,7 @@ export const AppointmentCreation = () => {
         text="Agendar"
       />
 
-      <Modal show={showAppointmentForm}>
+      <Modal show={showAppointmentForm} onClose={closeAppointmentForm}>
         <AppointmentForm />
       </Modal>
     </>
