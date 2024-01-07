@@ -1,4 +1,7 @@
+import { CalendarConsts } from "../../constants/calendar";
 import { Button } from "../ui/button";
+
+const YEARS_ALLOWED = [2024, 2025];
 
 export const AppointmentForm = () => {
   return (
@@ -13,31 +16,35 @@ export const AppointmentForm = () => {
         <div className="block">
           <div className="field is-horizontal">
             <div className="field-label is-normal">
-              <label className="label">Paciente</label>
+              <label className="label">Nome</label>
             </div>
 
             <div className="field-body">
               <div className="field">
                 <p className="control is-expanded">
-                  <input className="input" type="text" placeholder="Nome" />
+                  <input className="input" type="text" />
                 </p>
               </div>
             </div>
           </div>
 
           <div className="field is-horizontal">
-            <div className="field-label"></div>
+            <div className="field-label is-normal">
+              <label className="label">Idade</label>
+            </div>
             <div className="field-body">
               <div className="field is-expanded">
                 <div className="control">
-                  <input className="input" type="number" placeholder="Idade" />
+                  <input className="input" type="number" />
                 </div>
               </div>
             </div>
           </div>
 
           <div className="field is-horizontal">
-            <div className="field-label"></div>
+            <div className="field-label is-normal">
+              <label className="label">Sexo</label>
+            </div>
             <div className="field-body">
               <div className="field">
                 <div className="control">
@@ -51,9 +58,7 @@ export const AppointmentForm = () => {
               </div>
             </div>
           </div>
-        </div>
 
-        <div className="block">
           <div className="field is-horizontal">
             <div className="field-label is-normal">
               <label className="label">Exame</label>
@@ -61,7 +66,7 @@ export const AppointmentForm = () => {
 
             <div className="field-body">
               <div className="field">
-                <div className="control">
+                <div className="control is-expanded">
                   <div className="select">
                     <select>
                       <option>Raio X</option>
@@ -69,6 +74,48 @@ export const AppointmentForm = () => {
                     </select>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="field is-horizontal">
+            <div className="field-label is-normal">
+              <label className="label">Data</label>
+            </div>
+
+            <div className="field-body">
+              <div className="field has-addons">
+                <p className="control">
+                  <input
+                    className="input"
+                    type="number"
+                    placeholder="Dia"
+                    min={1}
+                    max={12}
+                  />
+                </p>
+                <p className="control">
+                  <span className="select">
+                    <select>
+                      {CalendarConsts.MONTHS.map((item) => (
+                        <option key={item} value={item}>
+                          {item}
+                        </option>
+                      ))}
+                    </select>
+                  </span>
+                </p>
+                <p className="control">
+                  <span className="select">
+                    <select>
+                      {YEARS_ALLOWED.map((item) => (
+                        <option key={item} value={item}>
+                          {item}
+                        </option>
+                      ))}
+                    </select>
+                  </span>
+                </p>
               </div>
             </div>
           </div>

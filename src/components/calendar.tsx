@@ -1,22 +1,7 @@
 import { useState } from "react";
+
 import styles from "./calendar.module.css";
-
-const months = [
-  "Janeiro",
-  "Fevereiro",
-  "Março",
-  "Abril",
-  "Maio",
-  "Junho",
-  "Julho",
-  "Agosto",
-  "Setembro",
-  "Outubro",
-  "Novembro",
-  "Dezembro",
-];
-
-const daysOfWeek = ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sáb"];
+import { CalendarConsts } from "../constants/calendar";
 
 const generatePreviousMonthLastDays = (
   firstDayOfMonth: number,
@@ -133,7 +118,7 @@ export const Calendar = () => {
     <div className={styles.wrapper}>
       <header>
         <p className={styles.currentDate}>
-          {months[month]} de {year}
+          {CalendarConsts.MONTHS[month]} de {year}
         </p>
         <div className={styles.icons}>
           <span className="icon" onClick={prevMonthHandler}>
@@ -147,7 +132,7 @@ export const Calendar = () => {
 
       <div className={styles.calendar}>
         <ul className={styles.weeks}>
-          {daysOfWeek.map((item) => (
+          {CalendarConsts.DAYS_OF_WEEK.map((item) => (
             <li key={item}>{item}</li>
           ))}
         </ul>
