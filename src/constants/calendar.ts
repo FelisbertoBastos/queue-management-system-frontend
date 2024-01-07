@@ -15,4 +15,6 @@ export class CalendarConsts {
   ];
 
   static DAYS_OF_WEEK = ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sáb"];
+
+  static YEARS_ALLOWED = [2024, 2025];
 }

@@ -15,12 +15,12 @@ export const AppointmentItem = ({
       <div className="columns">
         <div className="column">{patientName}</div>
         <div className="column is-narrow">
+          <AppointmentStatus status={status} />
+        </div>
+        <div className="column is-narrow">
           <span className="icon">
             <i className="far fa-edit"></i>
           </span>
-        </div>
-        <div className="column is-narrow">
-          <AppointmentStatus status={status} />
         </div>
       </div>
     </div>

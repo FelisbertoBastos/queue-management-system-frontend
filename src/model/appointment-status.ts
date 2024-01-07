@@ -3,6 +3,6 @@ export enum AppointmentStatus {
   CANCELED,
   CALLED,
   IN_CARE,
-  COMPLITED,
+  COMPLETED,
   UNDEFINED,
 }

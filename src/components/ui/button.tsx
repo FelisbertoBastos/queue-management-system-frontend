@@ -5,14 +5,23 @@ interface ButtonProps {
   higia?: boolean;
   text: string;
   icon?: string;
+  type?: "button" | "submit";
   onClick?: () => void;
 }
 
-export const Button = ({ color, higia, text, icon, onClick }: ButtonProps) => {
+export const Button = ({
+  color,
+  higia,
+  text,
+  icon,
+  type = "button",
+  onClick,
+}: ButtonProps) => {
   return (
     <button
       className={`button ${color}`}
       style={{ backgroundColor: higia ? Colors.HIGIA_PRIMARY : "" }}
+      type={type}
       onClick={onClick}
     >
       {icon && (

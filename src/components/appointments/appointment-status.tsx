@@ -25,7 +25,7 @@ export const AppointmentStatus = ({ status }: AppointmentStatusProps) => {
       tagClass += "is-link";
       tagText = "Em atendimento";
       break;
-    case AppointmentStatusEnum.COMPLITED:
+    case AppointmentStatusEnum.COMPLETED:
       tagClass += "is-success";
       tagText = "Concluído";
       break;

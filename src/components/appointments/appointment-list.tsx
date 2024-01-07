@@ -10,6 +10,26 @@ const appointments = [
   {
     id: 2,
     patient: { name: "Maria do Rośario Pereira", age: 38, gender: "F" },
+    status: AppointmentStatus.COMPLETED,
+  },
+  {
+    id: 3,
+    patient: { name: "José de Alguquerque", age: 84, gender: "M" },
+    status: AppointmentStatus.IN_CARE,
+  },
+  {
+    id: 4,
+    patient: { name: "Maria do Rośario Pereira", age: 38, gender: "F" },
+    status: AppointmentStatus.UNDEFINED,
+  },
+  {
+    id: 5,
+    patient: { name: "José de Alguquerque", age: 84, gender: "M" },
+    status: AppointmentStatus.CALLED,
+  },
+  {
+    id: 6,
+    patient: { name: "Maria do Rośario Pereira", age: 38, gender: "F" },
     status: AppointmentStatus.UNDEFINED,
   },
 ];
